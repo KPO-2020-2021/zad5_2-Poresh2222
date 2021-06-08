@@ -1,0 +1,4 @@
+/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/rebuild_cache.dir
+/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/edit_cache.dir
+/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir

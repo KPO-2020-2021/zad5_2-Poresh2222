@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/riddikk/PWR/zad5_2-Poresh2222/app/main.cpp
+stdlib.h
+-
+iostream
+-
+../inc/helpers/Menu.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Menu.hh
+../inc/Core.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Core.hh
+
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Core.hh
+
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Menu.hh
+stdlib.h
+-
+iostream
+-
+
