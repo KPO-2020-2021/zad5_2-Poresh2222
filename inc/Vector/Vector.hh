@@ -27,6 +27,8 @@ class Vector {
 
         Vector<Size> operator / (const double &tmp);
 
+        Vector<Size> operator = (const double &tmp);
+
 
         const double &operator [] (unsigned int index) const;
 
@@ -120,6 +122,20 @@ Vector<Size> Vector<Size>::operator / (const double &tmp) {
     for (unsigned int i = 0; i < Size; ++i) {
 
         result[i] = size[i] / tmp;
+
+    }
+
+    return result;
+
+}
+
+template <unsigned int Size>
+Vector<Size> Vector<Size>::operator = (const double &tmp) {
+    Vector<Size> result;
+
+    for (unsigned int i = 0; i < Size; ++i) {
+
+        result[i] = size[i] = tmp;
 
     }
 

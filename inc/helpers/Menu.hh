@@ -66,10 +66,18 @@ class Menu {
 
         }
 
+        ~Menu();
+
 };
 
 Menu::Menu() {
 
     std::cout << "\n******  Start  Program  ******\n" << std::endl;
+
+}
+
+Menu::~Menu() {
+
+    std::cout << "\n******  Finish Program  ******\n" << std::endl;
 
 }

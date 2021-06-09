@@ -2,7 +2,6 @@
 #include <iostream>
 
 #include "../inc/helpers/Menu.hh"
-#include "../inc/Object.hh"
 #include "../inc/Core.hh"
 
 int main() {
@@ -16,8 +15,9 @@ int main() {
 
     Menu Menu;
 
-    Drone<8> drone;
+    Core Core;
 
+    Vector3I startCorner, sizeTab;
 
 
     try {
@@ -77,12 +77,18 @@ int main() {
                                             if (tipsMode == true) {option = 'C'; Menu.MenuTip(option);}
 
                                             std::cout << "** Enter start point -> X Y Z **\n" << std::endl;
-                                            std::cin >> example;
+                                            std::cin >> startCorner;
 
                                             std::cout << "\n** Enter size values -> X Y Z **\n" << std::endl;
-                                            std::cin >> example;
+                                            std::cin >> sizeTab;
 
-                                            //core.NewDrone()
+                                            for (int i = 0; i < ROWS; ++i) {
+
+                                                sizeTab[i] = sizeTab[i] * 0.8;
+
+                                            }
+
+                                            Core.NewDrone(startCorner, sizeTab);
 
                                         break;
 
