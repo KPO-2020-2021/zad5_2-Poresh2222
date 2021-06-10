@@ -70,9 +70,22 @@ CMakeFiles/program.dir/src/Core.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Core.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/riddikk/PWR/zad5_2-Poresh2222/src/Core.cpp -o CMakeFiles/program.dir/src/Core.cpp.s
 
+CMakeFiles/program.dir/src/Drone.cpp.o: CMakeFiles/program.dir/flags.make
+CMakeFiles/program.dir/src/Drone.cpp.o: ../src/Drone.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/Drone.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/Drone.cpp.o -c /home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp
+
+CMakeFiles/program.dir/src/Drone.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/program.dir/src/Drone.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp > CMakeFiles/program.dir/src/Drone.cpp.i
+
+CMakeFiles/program.dir/src/Drone.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/program.dir/src/Drone.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp -o CMakeFiles/program.dir/src/Drone.cpp.s
+
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: CMakeFiles/program.dir/flags.make
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../src/lacze_do_gnuplota.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/riddikk/PWR/zad5_2-Poresh2222/src/lacze_do_gnuplota.cpp
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.i: cmake_force
@@ -84,6 +97,7 @@ CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s: cmake_force
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/riddikk/PWR/zad5_2-Poresh2222/src/lacze_do_gnuplota.cpp -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.s
 
 program: CMakeFiles/program.dir/src/Core.cpp.o
+program: CMakeFiles/program.dir/src/Drone.cpp.o
 program: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 program: CMakeFiles/program.dir/build.make
 

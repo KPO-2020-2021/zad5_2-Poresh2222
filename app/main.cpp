@@ -79,14 +79,8 @@ int main() {
                                             std::cout << "** Enter start point -> X Y Z **\n" << std::endl;
                                             std::cin >> startCorner;
 
-                                            std::cout << "\n** Enter size values -> X Y Z **\n" << std::endl;
+                                            std::cout << "\n** Enter size values -> L W H **\n" << std::endl;
                                             std::cin >> sizeTab;
-
-                                            for (int i = 0; i < ROWS; ++i) {
-
-                                                sizeTab[i] = sizeTab[i] * 0.8;
-
-                                            }
 
                                             Core.NewDrone(startCorner, sizeTab);
 

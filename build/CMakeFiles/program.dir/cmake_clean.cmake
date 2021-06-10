@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/program.dir/src/Core.cpp.o"
+  "CMakeFiles/program.dir/src/Drone.cpp.o"
   "CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
 )
 

@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/riddikk/PWR/zad5_2-Poresh2222/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/riddikk/PWR/zad5_2-Poresh2222/build -I/home/riddikk/PWR/zad5_2-Poresh2222/inc -I/home/riddikk/PWR/zad5_2-Poresh2222/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Drone.cpp.o -c /home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp",
+  "file": "/home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp"
+},
+{
+  "directory": "/home/riddikk/PWR/zad5_2-Poresh2222/build",
   "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/riddikk/PWR/zad5_2-Poresh2222/build -I/home/riddikk/PWR/zad5_2-Poresh2222/inc -I/home/riddikk/PWR/zad5_2-Poresh2222/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/riddikk/PWR/zad5_2-Poresh2222/src/lacze_do_gnuplota.cpp",
   "file": "/home/riddikk/PWR/zad5_2-Poresh2222/src/lacze_do_gnuplota.cpp"
 },

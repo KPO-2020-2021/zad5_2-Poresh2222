@@ -77,10 +77,12 @@ unit_tests_OBJECTS = \
 # External object files for target unit_tests
 unit_tests_EXTERNAL_OBJECTS = \
 "/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/Core.cpp.o" \
+"/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/Drone.cpp.o" \
 "/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
 
 unit_tests: tests/CMakeFiles/unit_tests.dir/main.cpp.o
 unit_tests: CMakeFiles/program.dir/src/Core.cpp.o
+unit_tests: CMakeFiles/program.dir/src/Drone.cpp.o
 unit_tests: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 unit_tests: tests/CMakeFiles/unit_tests.dir/build.make
 unit_tests: tests/CMakeFiles/unit_tests.dir/link.txt

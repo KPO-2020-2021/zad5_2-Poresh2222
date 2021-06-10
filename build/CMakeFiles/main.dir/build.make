@@ -77,10 +77,12 @@ main_OBJECTS = \
 # External object files for target main
 main_EXTERNAL_OBJECTS = \
 "/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/Core.cpp.o" \
+"/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/Drone.cpp.o" \
 "/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
 
 main: CMakeFiles/main.dir/app/main.cpp.o
 main: CMakeFiles/program.dir/src/Core.cpp.o
+main: CMakeFiles/program.dir/src/Drone.cpp.o
 main: CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt

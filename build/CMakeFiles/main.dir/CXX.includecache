@@ -25,6 +25,8 @@ string.h
 -
 stdlib.h
 -
+cmath
+-
 ./helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
 ./Objects/Drone.hh
@@ -37,8 +39,12 @@ fstream
 -
 Object.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
+../Vector/Vector2I.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector2I.hh
 ../Vector/Vector3I.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
+../Vector/Vector4I.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector4I.hh
 ../helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
 
@@ -60,7 +66,15 @@ iomanip
 ../helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
 
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector2I.hh
+Vector.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
+
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
+Vector.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
+
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector4I.hh
 Vector.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
 

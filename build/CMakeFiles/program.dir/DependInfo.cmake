@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/riddikk/PWR/zad5_2-Poresh2222/src/Core.cpp" "/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/Core.cpp.o"
+  "/home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp" "/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/Drone.cpp.o"
   "/home/riddikk/PWR/zad5_2-Poresh2222/src/lacze_do_gnuplota.cpp" "/home/riddikk/PWR/zad5_2-Poresh2222/build/CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

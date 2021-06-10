@@ -13,13 +13,10 @@ void Core::NewDrone(
         //const int objectIndex
 
     ) {
-
-    Vector3I corpusDroneTab[CUBE];
-
     
+    //Vector4I heliTab[4];
 
-
-    Vec.push_back(startCorner);
+    Vector3I supportCorners, heliSize, startHeliCorner[HELITAB], corpusDroneTab[CUBE], corpusHeliTab[HELI];
 
 
     for (int i = 0; i < CUBE; ++i) {
@@ -44,14 +41,88 @@ void Core::NewDrone(
 
         }
 
-        std::cout << corpusDroneTab[i] << std::endl;
+    }
+
+    DroneCorpus DroneCorpus(corpusDroneTab);
+
+    std::cout << "\n" << DroneCorpus << "corpus" << std::endl;
+
+    for (int i = 0; i < 3; ++i) {
+
+        if (i == 0 || i == 1) {
+
+            heliSize[i] = round(sizeTab[0] * 0.31);
+
+        } else {
+
+            heliSize[i] = round(sizeTab[i] * 0.33);
+
+        }
+
+        std::cout << "\n" << heliSize[i] << " heliSize" << std::endl;
 
     }
 
-    Drone Drone(corpusDroneTab);
+    for (int i = 0; i < HELITAB; ++i) {
 
-    Dro.push_back(Drone);
+        startHeliCorner[i] = corpusDroneTab[4 + i];
 
-    std::cout << Drone << std::endl;
+        std::cout << "\n" << startHeliCorner[i] << "startcorners" << std::endl;
+
+    }
+
+    for (int i = 0; i < HELITAB; ++i) {
+        
+        supportCorners = startHeliCorner[i];
+
+        for (int j = 0; j < HELI; ++j) {
+
+            if (j > 7) {supportCorners[2] = supportCorners[2] + heliSize[2];}
+
+            for (int k = 0; k < ROWS; ++k) {
+
+                if (((j == 0 || j == 3 || j == 8 || j == 11) && k == 0) || ((j == 2 || j == 10 || j == 5 || j == 13) && k == 1)) {
+
+                    corpusHeliTab[j][k] = supportCorners[k] + (heliSize[k] / 2);
+
+                }
+
+                if (((j == 4 || j == 12 || j == 7 || j == 15) && k == 0) || ((j == 1 || j == 9 || j == 6 || j == 14) && k == 1)) {
+
+                    corpusHeliTab[j][k] = supportCorners[k] - (heliSize[k] / 2);
+                    
+                }
+
+                if (((j == 1 || j == 9 || j == 2 || j == 10) && k == 0) || ((j == 3 || j == 11 || j == 4 || j == 12) && k == 1)) {
+
+                    corpusHeliTab[j][k] = supportCorners[k] + heliSize[k];
+
+                }
+
+                if (((j == 5 || j == 13 || j == 6 || j == 14) && k == 0) || ((j == 0 || j == 8 || j == 7 || j == 15) && k == 1)) {
+
+                    corpusHeliTab[j][k] = supportCorners[k] - heliSize[k];
+
+                }
+
+                if (k == 2) {
+
+                    corpusHeliTab[j][k] = supportCorners[k];
+
+                }
+                
+            }
+
+            supportCorners = startHeliCorner[i];
+
+        }
+
+        DroneHeli DroneHeli(corpusHeliTab);
+
+        std::cout << "\n" << DroneHeli << "heli" << std::endl;
+
+    }
+
+    //Dro.push_back(DroneCorpus);
 
 }

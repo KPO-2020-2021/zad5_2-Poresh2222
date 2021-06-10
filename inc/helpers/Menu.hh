@@ -55,7 +55,10 @@ class Menu {
             if (option == 'C') {
 
                 std::cout << "\n??? Star Point - Location of the first point of the object [0,0,0] ???" << std::endl;
-                std::cout << "??? Object Size - Total maximum size                               ???\n" << std::endl;
+                std::cout << "??? Object Size:                                                   ???\n" << std::endl;
+                std::cout << "??? L - Lenght Drone                                               ???" << std::endl;
+                std::cout << "??? W - Width  Drone                                               ???" << std::endl;
+                std::cout << "??? H - Height Drone                                               ???\n" << std::endl;
 
             } else if (option == 'M') {
 
