@@ -9,6 +9,7 @@ CMakeFiles/program.dir/src/Core.cpp.o
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector2I.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector4I.hh
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector5I.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/src/Core.cpp
 CMakeFiles/program.dir/src/Drone.cpp.o
@@ -18,6 +19,7 @@ CMakeFiles/program.dir/src/Drone.cpp.o
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector2I.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector4I.hh
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector5I.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o

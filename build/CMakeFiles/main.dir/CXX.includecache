@@ -45,6 +45,8 @@ Object.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
 ../Vector/Vector4I.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector4I.hh
+../Vector/Vector5I.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector5I.hh
 ../helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
 
@@ -75,6 +77,10 @@ Vector.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
 
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector4I.hh
+Vector.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
+
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector5I.hh
 Vector.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
 

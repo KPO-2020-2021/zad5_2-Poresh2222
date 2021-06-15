@@ -9,6 +9,7 @@ CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector2I.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector3I.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector4I.hh
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector5I.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/helpers/Menu.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/helpers/Size.hh
 

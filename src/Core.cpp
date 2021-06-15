@@ -18,6 +18,8 @@ void Core::NewDrone(
 
     Vector3I supportCorners, heliSize, startHeliCorner[HELITAB], corpusDroneTab[CUBE], corpusHeliTab[HELI];
 
+    //Drone<8>* arr[5];
+
 
     for (int i = 0; i < CUBE; ++i) {
 
@@ -43,9 +45,17 @@ void Core::NewDrone(
 
     }
 
-    DroneCorpus DroneCorpus(corpusDroneTab);
+    std::cout << "\n" << corpusDroneTab << "corpusTab" << std::endl;
 
-    std::cout << "\n" << DroneCorpus << "corpus" << std::endl;
+
+    //DroneCorpus DroneCorpus(corpusDroneTab);
+
+    //std::cout << "\n" << DroneCorpus << "corpus" << std::endl;
+
+
+    //arr[0] = new DroneCorpus(corpusDroneTab);
+
+    
 
     for (int i = 0; i < 3; ++i) {
 

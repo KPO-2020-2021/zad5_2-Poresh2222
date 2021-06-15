@@ -29,6 +29,8 @@ class Vector {
 
         Vector<Size> operator = (const double &tmp);
 
+        //Vector<Size> operator -- (const double *tmp);
+
 
         const double &operator [] (unsigned int index) const;
 
@@ -72,6 +74,21 @@ Vector<Size>::Vector(double tmp[Size]) {
     }
 
 }
+
+//template <unsigned int Size>
+//Vector<Size>::Vector(Vector<Size> tmp[Size]) {
+
+//    std::cout << "***" << std::endl;
+
+//    Vector<Size> result = tmp;
+
+//    for (unsigned int i = 0; i < Size; ++i) {
+
+//        size[i] = result[i];
+
+//    }
+
+//}
 
 template <unsigned int Size>
 Vector<Size> Vector<Size>::operator + (const Vector<Size> &V) {
@@ -142,6 +159,20 @@ Vector<Size> Vector<Size>::operator = (const double &tmp) {
     return result;
 
 }
+
+//template <unsigned int Size>
+//Vector<Size> Vector<Size>::operator -- (const double *tmp) {
+//    Vector<Size> result;
+
+//    for (unsigned int i = 0; i < Size; ++i) {
+
+//        result[i] = size[i] = tmp;
+
+//    }
+
+//    return result;
+
+//}
 
 template <unsigned int Size>
 const double &Vector<Size>::operator [] (unsigned int index) const {

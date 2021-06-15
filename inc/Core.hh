@@ -14,9 +14,12 @@ class Core {
 
     std::vector <Vector3I> Vec;
 
-    std::vector <Drone> Dro;
+    std::vector <DroneCorpus> Drc;
 
     std::vector <DroneHeli> Drh;
+
+    //template <unsigned int Size>
+    //std::vector <Drone<Size>> Drone;
 
     public:
 
