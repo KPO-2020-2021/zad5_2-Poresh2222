@@ -10,7 +10,7 @@ int main() {
 
     bool tipsMode = true;
 
-    int example;
+    int example, ObjectIndex = 0, objectIndex;
 
 
     Menu Menu;
@@ -79,10 +79,12 @@ int main() {
                                             std::cout << "** Enter start point -> X Y Z **\n" << std::endl;
                                             std::cin >> startCorner;
 
-                                            std::cout << "\n** Enter size values -> L W H **\n" << std::endl;
+                                            std::cout << "\n** Enter size values -> W L H **\n" << std::endl;
                                             std::cin >> sizeTab;
 
-                                            Core.NewDrone(startCorner, sizeTab);
+                                            Core.NewDrone(startCorner, sizeTab, ObjectIndex);
+
+                                            ObjectIndex +=1;
 
                                         break;
 
@@ -109,6 +111,15 @@ int main() {
                                 std::cin >> example;
 
                                 //core.move()
+
+                            break;
+
+                            case '5':
+
+                                std::cout << "*** Give number for object ***\n" << std::endl;
+                                std::cin >> objectIndex;
+
+                                Core.GetDrone(objectIndex - 1);
 
                             break;
 

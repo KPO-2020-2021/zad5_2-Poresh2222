@@ -29,6 +29,7 @@ class Menu {
             std::cout << "**** 2 - Move Object   ****\n" << std::endl;
             std::cout << "**** 3 - Rotate Object ****\n" << std::endl;
             std::cout << "**** 4 - Delete Object ****\n" << std::endl;
+            std::cout << "**** 5 - Get Object Inf****\n" << std::endl;
             std::cout << "\n**** 0 -   Back        ****\n" << std::endl;
 
         }

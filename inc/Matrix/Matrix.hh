@@ -19,7 +19,7 @@ class Matrix {
         Matrix(double [Size][Size]);
 
 
-        Vector<Size> operator * (const Vector<Size> V);
+        Vector<Size> operator * (const Vector<Size>& V);
 
 
         Matrix operator + (const Matrix tmp);
@@ -83,14 +83,14 @@ Matrix<Size>::Matrix(double tmp[Size][Size]) {
 }
 
 template <unsigned int Size>
-Vector<Size> Matrix<Size>::operator * (const Vector<Size> V) {
+Vector<Size> Matrix<Size>::operator * (const Vector<Size>& V) {
     Vector<Size> result;
 
     for (unsigned int i = 0; i < Size; ++i) {
 
         for (unsigned int j = 0; j < Size; ++j) {
 
-            result[i] += value[i][j] * tmp[j];
+            result[i] += value[i][j] * V[j];
 
         }
 

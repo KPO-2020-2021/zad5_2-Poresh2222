@@ -3,6 +3,8 @@
 
 CMakeFiles/program.dir/src/Core.cpp.o
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Core.hh
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix.hh
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
@@ -13,6 +15,8 @@ CMakeFiles/program.dir/src/Core.cpp.o
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/src/Core.cpp
 CMakeFiles/program.dir/src/Drone.cpp.o
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix.hh
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh

@@ -3,6 +3,8 @@
 
 CMakeFiles/main.dir/app/main.cpp.o: ../app/main.cpp
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Core.hh
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/Matrix/Matrix.hh
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/Matrix/Matrix3x3.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Objects/Drone.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Objects/Object.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector.hh

@@ -4,6 +4,8 @@
 CMakeFiles/main.dir/app/main.cpp.o
  /home/riddikk/PWR/zad5_2-Poresh2222/app/main.cpp
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Core.hh
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix.hh
+ /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
  /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh

@@ -89,7 +89,7 @@ Vector3I &Object<Size>::operator[](int index) {
 template <unsigned int Size>
 const Vector3I &Object<Size>::operator [] (int index) const {
 
-    if (index < 0 || index >= CUBE) {
+    if (index < 0 || index >= (int)Size) {
 
         throw std::runtime_error("Error: Vec out of range!");
 
