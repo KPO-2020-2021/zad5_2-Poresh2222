@@ -48,7 +48,14 @@ class Menu {
 
         void MenuSet();
 
-        void MenuLau();
+        void MenuLau() {
+
+            std::cout << "\n***    Launch Menu   ***\n" << std::endl;
+            std::cout << "*** 1 - Drone $et    ***\n" << std::endl;
+            std::cout << "*** 2 - Start        ***\n" << std::endl;
+            std::cout << "\n*** 0 - Back         ***\n" << std::endl;
+
+        }
 
 
         void MenuTip(char option) {

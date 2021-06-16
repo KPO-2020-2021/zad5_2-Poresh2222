@@ -15,41 +15,68 @@ class DroneCorpus: public Object<8> {
 
     public:
 
-        DroneCorpus(Vector3I pos, Vector3I size)
-        {
-            Vector3I half_size = size / 2;
+        DroneCorpus(Vector3I droPosition, Vector3I droSize) {
+            
+            Vector3I halfSize = droSize / 2;
+
             DroneCorpus& self = *this;
 
             int l = 0;
-            for (double i = -1; i <= 1; ++i)
-                for (double j = -1; j <= 1; ++j)
-                    for (double k = -1; k <= 1; ++k)
-                        if (i != 0 && j != 0 && k != 0)
-                            self[l++] = pos + Vector3I{k, j, i}.mult(half_size);
+
+            for (double i = -1; i <= 1; ++i) {
+
+                for (double j = -1; j <= 1; ++j) {
+
+                    for (double k = -1; k <= 1; ++k) {
+
+                        if (i != 0 && j != 0 && k != 0) {
+
+                            self[l++] = droPosition + Vector3I{k, j, i}.mult(halfSize);
+
+                        }
+
+                    }
+
+                }
+
+            }
+
         }
+
+        void UpDate();
 
 };
 
 class DroneHeli: public Object<16> {
 
-    Vector3I pos;
+    Vector3I droPosition;
 
     public:
+    
+        DroneHeli() : Object() {}
 
-        DroneHeli(Vector3I pos, double r, [[maybe_unused]]double h) 
-        {
-            Matrix3D m = Matrix3D::Rotate_Z(45);
-            Matrix3D m2 = Matrix3D::Rotate_Z(-22.5);
-            Vector3I v = m2 * Vector3I{0, r, 0};
-            for (int i = 0; i < 8; i++)
-            {
-                v = m * v;
-                (*this)[i] = pos + v;
-                (*this)[i+8] = pos + v + Vector3I{0, 0, h};
+        DroneHeli(Vector3I heliPosition, double R, double H) { //[[maybe_unused]]
+
+            Matrix3D M1 = Matrix3D::Rotate_Z(45);
+
+            Matrix3D M2 = Matrix3D::Rotate_Z(-22.5);
+
+            Vector3I V = M2 * Vector3I{0, R, 0};
+
+
+            for (int i = 0; i < 8; i++) {
+                V = M1 * V;
+
+                (*this)[i] = heliPosition + V;
+                (*this)[i+8] = heliPosition + V + Vector3I{0, 0, H};
+
             }
 
-            this->pos = pos;
+            this->droPosition = heliPosition;
+
         }
+
+        void UpDate();
 
 };
 
@@ -64,22 +91,25 @@ class Drone {
         DroneHeli droHelis[4];
     
 
-        Drone(Vector3I droPosition, Vector3I size)
+        Drone(Vector3I droPosition, Vector3I droSize)
 
-            : droCorpus(droPosition, size), 
+            : droCorpus(droPosition, droSize), 
             
               droHelis {
                 
-                DroneHeli(droCorpus[4], size[0] * 0.66, size[2] * 0.33), 
-                DroneHeli(droCorpus[5], size[0] * 0.66, size[2] * 0.33),
-                DroneHeli(droCorpus[6], size[0] * 0.66, size[2] * 0.33),
-                DroneHeli(droCorpus[7], size[0] * 0.66, size[2] * 0.33)
+                DroneHeli(droCorpus[4], droSize[0] * 0.66, droSize[2] * 0.33), 
+                DroneHeli(droCorpus[5], droSize[0] * 0.66, droSize[2] * 0.33),
+                DroneHeli(droCorpus[6], droSize[0] * 0.66, droSize[2] * 0.33),
+                DroneHeli(droCorpus[7], droSize[0] * 0.66, droSize[2] * 0.33)
                 
             } {
             
                 this->droPosition = droPosition;
             
-            }
+        }
+
+        void UpDate();
+
 };
 
 std::ostream &operator<<(std::ostream &out, Drone const &drone);

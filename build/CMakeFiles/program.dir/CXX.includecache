@@ -21,6 +21,8 @@ cmath
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
 ./Objects/Drone.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
+./Matrix/Matrix3x3.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
 
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix.hh
 ../Vector/Vector.hh
@@ -101,8 +103,6 @@ Vector.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
 ../inc/Objects/Object.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
-
-/home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp
-../inc/Objects/Drone.hh
-/home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
+../inc/Matrix/Matrix3x3.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
 

@@ -8,11 +8,18 @@
 
 #include "./helpers/Size.hh"
 #include "./Objects/Drone.hh"
+#include "./Matrix/Matrix3x3.hh"
 
 
 class Core {
 
     std::vector <Drone> Dro;
+
+    std::vector <Matrix3D> MatrixOne;
+
+    std::vector <Matrix3D> MatrixDro;
+
+    std::vector <Matrix3D> MatrixHel;
 
     public:
 
@@ -31,5 +38,21 @@ class Core {
             const int
 
         );
+
+        void DelDrone(
+
+            const int
+
+        );
+
+        void FlyControl(
+
+            const int,
+
+            bool
+
+        );
+
+        ///void FlySettings();
 
 };

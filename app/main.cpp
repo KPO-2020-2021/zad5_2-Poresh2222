@@ -84,6 +84,8 @@ int main() {
 
                                             Core.NewDrone(startCorner, sizeTab, ObjectIndex);
 
+                                            std::cout << ObjectIndex << "new" << std::endl;
+
                                             ObjectIndex +=1;
 
                                         break;
@@ -114,12 +116,67 @@ int main() {
 
                             break;
 
+                            case '4':
+
+                                std::cout << "*** Give number for object ***\n" << std::endl;
+                                std::cin >> objectIndex;
+
+                                Core.DelDrone(objectIndex - 1);
+
+                                ObjectIndex = objectIndex - 1;
+
+                                std::cout << ObjectIndex << "del" << std::endl;
+
+                            break;
+
                             case '5':
 
                                 std::cout << "*** Give number for object ***\n" << std::endl;
                                 std::cin >> objectIndex;
 
                                 Core.GetDrone(objectIndex - 1);
+
+                            break;
+
+                        }
+
+                    }
+
+                break;
+
+                case '4':
+
+                    choiseTwo = ' ';
+
+                    while(choiseTwo != '0') {
+
+                        Menu.MenuLau();
+
+                        std::cin >> choiseTwo;
+
+                        switch(choiseTwo) {
+
+                            case '0':
+
+                                choiseTwo = '0';
+
+                            break;
+
+                            case '1':
+
+                                std::cout << "*** Give number for object ***\n" << std::endl;
+                                std::cin >> objectIndex;
+
+                                Core.FlyControl(objectIndex - 1, false);
+
+                            break;
+
+                            case '2':
+
+                                std::cout << "*** Give number for object ***\n" << std::endl;
+                                std::cin >> objectIndex;
+
+                                Core.FlyControl(objectIndex - 1, true);
 
                             break;
 

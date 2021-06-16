@@ -6,6 +6,7 @@
 #include "../helpers/Size.hh"
 
 
+
 template <unsigned int Size>
 
 class Vector {
@@ -18,11 +19,14 @@ class Vector {
 
         Vector<Size>(double [Size]);
 
-        Vector<Size>(std::initializer_list<double> il)
-        {
+        Vector<Size>(std::initializer_list<double> il) {
+
             int i = 0;
+
             for (double v : il)
+
                 (*this)[i++] = v;
+
         }
 
 
@@ -35,8 +39,6 @@ class Vector {
         Vector<Size> operator / (double tmp) const;
 
         Vector<Size> operator = (double tmp);
-
-        //Vector<Size> operator -- (const double *tmp);
 
         Vector<Size> mult(const Vector<Size> &V) const;
 
@@ -83,21 +85,6 @@ Vector<Size>::Vector(double tmp[Size]) {
     }
 
 }
-
-//template <unsigned int Size>
-//Vector<Size>::Vector(Vector<Size> tmp[Size]) {
-
-//    std::cout << "***" << std::endl;
-
-//    Vector<Size> result = tmp;
-
-//    for (unsigned int i = 0; i < Size; ++i) {
-
-//        size[i] = result[i];
-
-//    }
-
-//}
 
 template <unsigned int Size>
 Vector<Size> Vector<Size>::operator + (const Vector<Size> &V) const {
@@ -170,27 +157,18 @@ Vector<Size> Vector<Size>::operator = (double tmp) {
 }
 
 template <unsigned int Size>
-Vector<Size> Vector<Size>::mult(const Vector<Size> &V) const
-{
+Vector<Size> Vector<Size>::mult(const Vector<Size> &V) const {
     Vector<Size> result;
-    for (unsigned int i = 0; i < Size; ++i)
+
+    for (unsigned int i = 0; i < Size; ++i) {
+
         result[i] = V[i] * (*this)[i];
+
+    }
+
     return result;
+
 }
-
-//template <unsigned int Size>
-//Vector<Size> Vector<Size>::operator -- (const double *tmp) {
-//    Vector<Size> result;
-
-//    for (unsigned int i = 0; i < Size; ++i) {
-
-//        result[i] = size[i] = tmp;
-
-//    }
-
-//    return result;
-
-//}
 
 template <unsigned int Size>
 const double &Vector<Size>::operator [] (unsigned int index) const {
