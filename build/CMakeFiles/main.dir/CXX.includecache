@@ -63,6 +63,10 @@ iostream
 -
 fstream
 -
+cmath
+-
+math.h
+-
 Object.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
 ../Vector/Vector2I.hh

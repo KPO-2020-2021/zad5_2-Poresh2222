@@ -26,6 +26,7 @@ CMakeFiles/program.dir/src/Drone.cpp.o: ../inc/Vector/Vector4I.hh
 CMakeFiles/program.dir/src/Drone.cpp.o: ../inc/Vector/Vector5I.hh
 CMakeFiles/program.dir/src/Drone.cpp.o: ../inc/helpers/Size.hh
 CMakeFiles/program.dir/src/Drone.cpp.o: ../src/Drone.cpp
+CMakeFiles/program.dir/src/Drone.cpp.o: ../src/Vector3I.cpp
 
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../inc/helpers/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o: ../src/lacze_do_gnuplota.cpp

@@ -17,7 +17,7 @@ class Object {
 
         Vector3I pivot;
 
-        Vector3I direction;
+        Vector3I direction = {0, 1, 0};
 
         std::vector<int> indices;
 

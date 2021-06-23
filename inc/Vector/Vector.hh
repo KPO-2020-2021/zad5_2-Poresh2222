@@ -295,9 +295,9 @@ float Vector<Size>::scalar(const Vector<Size> &V) const {
     
     float result = 0.0f;
 
-    for (int i = 0; i < Size; i++) {
+    for (uint i = 0; i < Size; i++) {
 
-        result = result + *this[i] * V[i]; 
+        result = result + (*this)[i] * V[i]; 
 
     }
 

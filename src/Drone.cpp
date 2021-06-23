@@ -1,12 +1,20 @@
 #include "../inc/Objects/Drone.hh"
 
+#include "Vector3I.cpp"
+
 void Drone::UpDate(float dt) {
 
     Vector3I distance = targetPosition - droCorpus.GetPivot();
 
     Vector3I translation;
 
+    Vector3I product;
+
     float max_translation = MAX_VELOCITY * dt;
+
+    float max_rotation = FLIGHT_ROTATION * dt;
+
+    float angleFlyRot, rotation = max_rotation;
 
     if (distance.length() > 0) {
 
@@ -19,7 +27,42 @@ void Drone::UpDate(float dt) {
             } else {
 
                 distance[2] = 0.0f;
-                
+
+                angleFlyRot = acos(droCorpus.GetDirection().scalar(distance.normalized())) * 180 / M_PI;
+
+                angleFlyRot = floor(angleFlyRot);
+
+                std::cout << angleFlyRot << " -> generate\n" << std::endl;
+
+                if (angleFlyRot != 0.0f) {
+
+                    std::cout << angleFlyRot << " -> in If != 0.0f\n" << std::endl;
+
+                    if (angleFlyRot < rotation) {
+
+                        rotation = angleFlyRot;
+
+                    }
+
+                    if (cross(droCorpus.GetDirection(), distance.normalized())[2] < 0) {
+
+                        rotation *= -1.0f;
+
+                    }
+
+                    Matrix3D m = Matrix3D::Rotate_Z(rotation);
+
+                    droCorpus.Rotate(m);
+
+                    for (DroneHeli &heli: droHelis) {
+
+                        heli.Rotate(m, droCorpus.GetPivot());
+
+                    }
+
+                    distance = Vector3I();
+
+                }
                 
             }
 

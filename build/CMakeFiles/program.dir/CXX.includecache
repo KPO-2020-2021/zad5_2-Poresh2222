@@ -49,6 +49,10 @@ iostream
 -
 fstream
 -
+cmath
+-
+math.h
+-
 Object.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
 ../Vector/Vector2I.hh
@@ -129,4 +133,10 @@ vector
 /home/riddikk/PWR/zad5_2-Poresh2222/src/Drone.cpp
 ../inc/Objects/Drone.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
+Vector3I.cpp
+/home/riddikk/PWR/zad5_2-Poresh2222/src/Vector3I.cpp
+
+/home/riddikk/PWR/zad5_2-Poresh2222/src/Vector3I.cpp
+../inc/Vector/Vector3I.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
 

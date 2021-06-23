@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <fstream>
+#include <cmath>
+#include <math.h>
 
 #include "Object.hh"
 #include "../Vector/Vector2I.hh"
@@ -10,6 +12,7 @@
 #include "../Vector/Vector5I.hh"
 #include "../Matrix/Matrix3x3.hh"
 #include "../helpers/Size.hh"
+
 
 class DroneCorpus: public Object<8> {
 
@@ -89,8 +92,9 @@ class DroneHeli: public Object<16> {
 
 class Drone {
 
-        constexpr static const float MAX_VELOCITY = 5.5f;
+        constexpr static const float MAX_VELOCITY = 10.0f;
         constexpr static const float FLIGHT_HEIGHT = 40.0f;
+        constexpr static const float FLIGHT_ROTATION = 40.0f;
 
     public:
 
