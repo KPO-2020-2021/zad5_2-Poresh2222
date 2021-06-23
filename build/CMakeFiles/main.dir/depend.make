@@ -14,4 +14,5 @@ CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector4I.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/Vector/Vector5I.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/helpers/Menu.hh
 CMakeFiles/main.dir/app/main.cpp.o: ../inc/helpers/Size.hh
+CMakeFiles/main.dir/app/main.cpp.o: ../inc/helpers/lacze_do_gnuplota.hh
 

@@ -4,21 +4,26 @@
 #include <fstream>
 
 #include "../Vector/Vector3I.hh"
+#include "../Matrix/Matrix3x3.hh"
 #include "../helpers/Size.hh"
 
 template <unsigned int Size>
 
 class Object {
 
-    Vector3I lokCorners[Size];
+    protected:
+
+        Vector3I lokCorners[Size];
+        
+        Vector3I pivot;
+
+        std::vector<int> indices;
 
     public:
 
         Object();
 
-        Object(const Object &obj);
-
-        Object(Vector3I objectCorners[Size]);
+        Object(Vector3I objectCorners[Size], Vector3I pivot);
 
 
         Vector3I &operator [] (int index);
@@ -30,6 +35,58 @@ class Object {
 
         const double &operator () (unsigned int row, unsigned int column) const;
 
+        void Translate(Vector3I v) {
+
+            for (uint i = 0; i < Size; i++) {
+
+                lokCorners[i] += v;
+
+            }
+
+            pivot += v;
+
+        }
+
+        void Rotate(const Matrix3D& m) {
+
+            Rotate(m, pivot);
+
+        }
+
+        void Rotate(const Matrix3D& m, Vector3I center) {
+            
+            for (uint i = 0; i < Size; i++) {
+
+                Vector3I v = lokCorners[i] - center;
+
+                v = m * v;
+
+                lokCorners[i] = v + center;
+
+            }
+
+            Vector3I v = pivot - center;
+            v = m * v;
+            pivot = v + center;
+        }
+
+        Vector3I GetPivot() const {
+
+            return pivot;
+
+        }
+
+        void SaveToFile(const std::string& filename) {
+
+            std::ofstream f(filename);
+
+            for (int index : indices) {
+
+                f << lokCorners[index] << std::endl;
+
+            }
+
+        }
 
 };
 
@@ -54,28 +111,15 @@ Object<Size>::Object() {
 }
 
 template <unsigned int Size>
-Object<Size>::Object(const Object<Size> &obj) {
-
-    for (unsigned int i = 0; i < Size; ++i) {
-        
-        for (unsigned int j = 0; j < ROWS; ++j) {
-
-            lokCorners[i][j] = obj(i, j);
-
-        }
-        
-    }
-
-}
-
-template <unsigned int Size>
-Object<Size>::Object(Vector3I tmp[Size]) {
+Object<Size>::Object(Vector3I tmp[Size], Vector3I pivot) {
 
     for (unsigned int i = 0; i < Size; ++i) {
             
         lokCorners[i] = tmp[i];
 
     }
+
+    this->pivot = pivot;
 
 }
 

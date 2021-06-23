@@ -5,8 +5,11 @@
 #include <string.h>
 #include <stdlib.h>
 #include <cmath>
+#include <iostream>
+#include <fstream>
 
 #include "./helpers/Size.hh"
+#include "./helpers/lacze_do_gnuplota.hh"
 #include "./Objects/Drone.hh"
 #include "./Matrix/Matrix3x3.hh"
 
@@ -14,12 +17,6 @@
 class Core {
 
     std::vector <Drone> Dro;
-
-    std::vector <Matrix3D> MatrixOne;
-
-    std::vector <Matrix3D> MatrixDro;
-
-    std::vector <Matrix3D> MatrixHel;
 
     public:
 
@@ -29,11 +26,11 @@ class Core {
 
             const Vector3I,
 
-            const int
+            PzG::LaczeDoGNUPlota& Lacze
 
         );
 
-        void GetDrone(
+        Drone& GetDrone(
 
             const int
 
@@ -45,14 +42,6 @@ class Core {
 
         );
 
-        void FlyControl(
-
-            const int,
-
-            bool
-
-        );
-
-        ///void FlySettings();
+        void Update(float dt);
 
 };

@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <iostream>
+#include <thread>
 
 #include "../inc/helpers/Menu.hh"
 #include "../inc/Core.hh"
+#include "../inc/helpers/lacze_do_gnuplota.hh"
 
 int main() {
 
@@ -18,7 +20,19 @@ int main() {
     Core Core;
 
     Vector3I startCorner, sizeTab;
+    
+    Vector3I destination;
 
+
+    PzG::LaczeDoGNUPlota Lacze;
+
+    Lacze.Inicjalizuj();
+
+    Lacze.ZmienTrybRys(PzG::TR_3D);
+    
+    Lacze.UstawZakresY(0, 500);
+    Lacze.UstawZakresX(0, 500);
+    Lacze.UstawZakresZ(0, 500);
 
     try {
 
@@ -82,9 +96,9 @@ int main() {
                                             std::cout << "\n** Enter size values -> W L H **\n" << std::endl;
                                             std::cin >> sizeTab;
 
-                                            Core.NewDrone(startCorner, sizeTab, ObjectIndex);
+                                            Core.NewDrone(startCorner, sizeTab, Lacze);
 
-                                            std::cout << ObjectIndex << "new" << std::endl;
+                                            std::cout << ObjectIndex << " --> Drone Index" << std::endl;
 
                                             ObjectIndex +=1;
 
@@ -92,7 +106,7 @@ int main() {
 
                                         case '2':
 
-                                            //coming soon
+                                            //DLC
 
                                         break;
 
@@ -125,7 +139,7 @@ int main() {
 
                                 ObjectIndex = objectIndex - 1;
 
-                                std::cout << ObjectIndex << "del" << std::endl;
+                                std::cout << ObjectIndex << " --> Drone Index (Dell)" << std::endl;
 
                             break;
 
@@ -164,19 +178,28 @@ int main() {
 
                             case '1':
 
-                                std::cout << "*** Give number for object ***\n" << std::endl;
+                                std::cout << "*** Give number for Drone ***\n" << std::endl;
                                 std::cin >> objectIndex;
+                                std::cout << "*** Give destination for object ***\n" << std::endl;
+                                std::cin >> destination;
 
-                                Core.FlyControl(objectIndex - 1, false);
+                                Core.GetDrone(objectIndex).targetPosition = destination;
 
                             break;
 
                             case '2':
 
-                                std::cout << "*** Give number for object ***\n" << std::endl;
-                                std::cin >> objectIndex;
+                                while(true)
+                                { 
+                                    Core.Update(0.1f);
 
-                                Core.FlyControl(objectIndex - 1, true);
+                                    Lacze.Rysuj();
+
+                                    using namespace std::chrono_literals;
+
+                                    std::this_thread::sleep_for(100ms);
+
+                                }
 
                             break;
 

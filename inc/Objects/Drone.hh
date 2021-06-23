@@ -41,17 +41,23 @@ class DroneCorpus: public Object<8> {
 
             }
 
+            pivot = droPosition;
+
+            indices = std::vector<int>{0, 1, 3, 2, 0, 4, 5, 7, 6, 4, 7, 3, 2, 6, 5, 1};
+
         }
 
-        void UpDate();
+    void UpDate(float dt);
 
 };
 
 class DroneHeli: public Object<16> {
 
-    Vector3I droPosition;
+    constexpr static const float ROTATION_SPEED = 45.0f;
 
     public:
+
+        bool enabled = false;
     
         DroneHeli() : Object() {}
 
@@ -72,23 +78,27 @@ class DroneHeli: public Object<16> {
 
             }
 
-            this->droPosition = heliPosition;
+            pivot = heliPosition;
+            indices = std::vector<int>{0, 1, 2, 3, 4, 5, 6, 7, 0, 8, 9, 10 ,11, 12, 13, 14, 15, 8};
 
         }
 
-        void UpDate();
+    void UpDate(float dt, int index);
 
 };
 
 class Drone {
 
-    public:
+        constexpr static const float MAX_VELOCITY = 5.5f;
+        constexpr static const float FLIGHT_HEIGHT = 40.0f;
 
-        Vector3I droPosition;
+    public:
 
         DroneCorpus droCorpus;
 
         DroneHeli droHelis[4];
+
+        Vector3I targetPosition;
     
 
         Drone(Vector3I droPosition, Vector3I droSize)
@@ -97,19 +107,54 @@ class Drone {
             
               droHelis {
                 
-                DroneHeli(droCorpus[4], droSize[0] * 0.66, droSize[2] * 0.33), 
-                DroneHeli(droCorpus[5], droSize[0] * 0.66, droSize[2] * 0.33),
-                DroneHeli(droCorpus[6], droSize[0] * 0.66, droSize[2] * 0.33),
-                DroneHeli(droCorpus[7], droSize[0] * 0.66, droSize[2] * 0.33)
+                DroneHeli(droCorpus[4], droSize[0] * 0.45, droSize[2] * 0.33), 
+                DroneHeli(droCorpus[5], droSize[0] * 0.45, droSize[2] * 0.33),
+                DroneHeli(droCorpus[6], droSize[0] * 0.45, droSize[2] * 0.33),
+                DroneHeli(droCorpus[7], droSize[0] * 0.45, droSize[2] * 0.33)
                 
             } {
-            
-                this->droPosition = droPosition;
-            
+
+            targetPosition = droPosition;    
         }
 
-        void UpDate();
+        void UpDate(float dt);
+        
+        void TurnHelis(bool on_off) {
 
+            for (DroneHeli& heli : droHelis) {
+                
+                heli.enabled = on_off;
+
+            }
+
+        }
+
+        void SaveToFile(const std::string& filename) {
+
+            droCorpus.SaveToFile(filename + "_corpus");
+
+            for (uint i = 0; i < 4; i++) {
+        
+                droHelis[i].SaveToFile(filename + "_heli" + std::to_string(i));
+
+            }
+        
+        }
+        
+
+        std::vector<std::string> GetGNUPlotFilenames(const std::string& filename) const {
+
+            std::vector<std::string> filenames{filename + "_corpus"};
+
+            for (uint i = 0; i < 4; i++) {
+
+                filenames.push_back(filename + "_heli" + std::to_string(i));
+
+            }
+
+            return filenames;
+
+        }
 };
 
 std::ostream &operator<<(std::ostream &out, Drone const &drone);

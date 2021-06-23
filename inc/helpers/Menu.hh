@@ -38,7 +38,7 @@ class Menu {
 
             std::cout << "\n*** Select Object ***\n" << std::endl;
             std::cout << "*** 1 - Drone     ***\n" << std::endl;
-            std::cout << "*** 2 - Car       ***\n" << std::endl;
+            //std::cout << "*** 2 - Car       ***\n" << std::endl;
             std::cout << "\n*** 0 - Back      ***\n" << std::endl;
 
         }
@@ -51,8 +51,8 @@ class Menu {
         void MenuLau() {
 
             std::cout << "\n***    Launch Menu   ***\n" << std::endl;
-            std::cout << "*** 1 - Drone $et    ***\n" << std::endl;
-            std::cout << "*** 2 - Start        ***\n" << std::endl;
+            std::cout << "*** 1 - Drone Destination $et    ***\n" << std::endl;
+            std::cout << "*** 2 - Launch        ***\n" << std::endl;
             std::cout << "\n*** 0 - Back         ***\n" << std::endl;
 
         }

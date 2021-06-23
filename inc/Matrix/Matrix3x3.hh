@@ -5,6 +5,7 @@
 
 
 class Matrix3D : public Matrix<3> {
+    
     public:
 
         static Matrix3D Rotate_X(const double angle) {

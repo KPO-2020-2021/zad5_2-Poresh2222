@@ -12,6 +12,7 @@ CMakeFiles/program.dir/src/Core.cpp.o: ../inc/Vector/Vector3I.hh
 CMakeFiles/program.dir/src/Core.cpp.o: ../inc/Vector/Vector4I.hh
 CMakeFiles/program.dir/src/Core.cpp.o: ../inc/Vector/Vector5I.hh
 CMakeFiles/program.dir/src/Core.cpp.o: ../inc/helpers/Size.hh
+CMakeFiles/program.dir/src/Core.cpp.o: ../inc/helpers/lacze_do_gnuplota.hh
 CMakeFiles/program.dir/src/Core.cpp.o: ../src/Core.cpp
 
 CMakeFiles/program.dir/src/Drone.cpp.o: ../inc/Matrix/Matrix.hh

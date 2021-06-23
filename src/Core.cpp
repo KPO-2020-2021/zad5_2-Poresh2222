@@ -11,44 +11,33 @@ void Core::NewDrone(
 
         const Vector3I sizeTab,
 
-        const int objectIndex
+        PzG::LaczeDoGNUPlota& Lacze
 
     ) {
 
-    Matrix3D matrixOne, matrixDro, matrixHel;
+    uint id = Dro.size();   //generate new index for Drone, take size Drone Vector
 
+    Dro.push_back(Drone(startCenter, sizeTab));  
 
-    MatrixOne.push_back(matrixOne);
+    std::vector<std::string> filenames = Dro.back().GetGNUPlotFilenames("data/drone" + std::to_string(id));
 
-    MatrixDro.push_back(matrixDro);
+    for (std::string& name : filenames) {
 
-    MatrixHel.push_back(matrixHel);
+        Lacze.DodajNazwePliku(name.c_str());
 
+    }
 
-    Dro.push_back(Drone(startCenter, sizeTab));
-
-
-    std::cout << objectIndex << " <-- Object Index" << std::endl;
-
-
-    GetDrone(objectIndex);
+    std::cout << id << " --> Drone Index" << std::endl;
 
 }
 
-void Core::GetDrone(
+Drone& Core::GetDrone(
 
         const int objectIndex
 
     ) {
 
-    std::cout << Dro.at(objectIndex) << std::endl;
-
-
-    std::cout << MatrixOne.at(objectIndex) << std::endl;
-
-    std::cout << MatrixDro.at(objectIndex) << std::endl;
-
-    std::cout << MatrixHel.at(objectIndex) << std::endl;
+    return Dro[objectIndex];
 
 }
 
@@ -64,36 +53,13 @@ void Core::DelDrone(
 
 }
 
-void Core::FlyControl(
+void Core::Update(float dt) {
 
-        const int objectIndex,
+    for (uint i = 0; i < Dro.size(); ++i) {
 
-        bool launchStatus
-
-    ) {
-
-    if (launchStatus == false) {
-
-        std::cout << "All is ready!" << std::endl;
-
-    }
-
-    if (launchStatus == true) {
-
-        Dro.at(objectIndex).UpDate();
-
-        std::cout << Dro.at(objectIndex) << std::endl;
+        Dro[i].UpDate(dt);
+        Dro[i].SaveToFile("data/drone" + std::to_string(i));
 
     }
 
 }
-
-
-
-//Dro.at(objectIndex).droHelis[j]
-
-//    for (Drone &drone : Dro) {
-//
-//        drone.UpDate();
-//
-//    }

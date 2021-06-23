@@ -11,10 +11,14 @@ stdlib.h
 -
 iostream
 -
+thread
+-
 ../inc/helpers/Menu.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Menu.hh
 ../inc/Core.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Core.hh
+../inc/helpers/lacze_do_gnuplota.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/lacze_do_gnuplota.hh
 
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Core.hh
 cstdlib
@@ -27,8 +31,14 @@ stdlib.h
 -
 cmath
 -
+iostream
+-
+fstream
+-
 ./helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
+./helpers/lacze_do_gnuplota.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/lacze_do_gnuplota.hh
 ./Objects/Drone.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
 ./Matrix/Matrix3x3.hh
@@ -75,6 +85,8 @@ fstream
 -
 ../Vector/Vector3I.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
+../Matrix/Matrix3x3.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
 ../helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
 
@@ -82,6 +94,10 @@ fstream
 iostream
 -
 iomanip
+-
+cmath
+-
+algorithm
 -
 ../helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
@@ -109,4 +125,12 @@ iostream
 -
 
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
+
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/lacze_do_gnuplota.hh
+string
+-
+list
+-
+vector
+-
 
