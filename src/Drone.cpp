@@ -19,7 +19,8 @@ void Drone::UpDate(float dt) {
             } else {
 
                 distance[2] = 0.0f;
-
+                
+                
             }
 
         }

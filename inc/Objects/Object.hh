@@ -14,8 +14,10 @@ class Object {
     protected:
 
         Vector3I lokCorners[Size];
-        
+
         Vector3I pivot;
+
+        Vector3I direction;
 
         std::vector<int> indices;
 
@@ -68,11 +70,20 @@ class Object {
             Vector3I v = pivot - center;
             v = m * v;
             pivot = v + center;
+
+            direction = m * direction;
+
         }
 
         Vector3I GetPivot() const {
 
             return pivot;
+
+        }
+
+        Vector3I GetDirection() const {
+
+            return direction;
 
         }
 
@@ -120,6 +131,8 @@ Object<Size>::Object(Vector3I tmp[Size], Vector3I pivot) {
     }
 
     this->pivot = pivot;
+
+    this->direction = {0, 1, 0};
 
 }
 

@@ -57,7 +57,10 @@ class Vector {
 
         Vector<Size> normalized() const;
 
+
         float length() const;
+
+        float scalar(const Vector<Size> &V) const;
 
         template<uint NewSize>
         Vector<NewSize> cast() const;
@@ -70,9 +73,6 @@ std::ostream &operator << (std::ostream &out, Vector<Size> const &tmp);
 
 template <unsigned int Size>
 std::istream &operator >> (std::istream &in, Vector<Size> &tmp);
-
-
-
 
 template <unsigned int Size>
 Vector<Size>::Vector() {
@@ -287,6 +287,21 @@ float Vector<Size>::length() const {
     }
 
     return sqrt(f);
+
+}
+
+template <unsigned int Size>
+float Vector<Size>::scalar(const Vector<Size> &V) const {
+    
+    float result = 0.0f;
+
+    for (int i = 0; i < Size; i++) {
+
+        result = result + *this[i] * V[i]; 
+
+    }
+
+    return result;
 
 }
 
