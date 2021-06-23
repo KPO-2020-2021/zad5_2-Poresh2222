@@ -12,7 +12,7 @@ int main() {
 
     bool tipsMode = true;
 
-    int example, ObjectIndex = 0, objectIndex;
+    int ObjectIndex = 0, objectIndex;
 
 
     Menu Menu;
@@ -93,12 +93,12 @@ int main() {
                                             std::cout << "** Enter start point -> X Y Z **\n" << std::endl;
                                             std::cin >> startCorner;
 
+                                            startCorner[2] = 0;
+
                                             std::cout << "\n** Enter size values -> W L H **\n" << std::endl;
                                             std::cin >> sizeTab;
 
                                             Core.NewDrone(startCorner, sizeTab, Lacze);
-
-                                            std::cout << ObjectIndex << " --> Drone Index" << std::endl;
 
                                             ObjectIndex +=1;
 
@@ -120,13 +120,12 @@ int main() {
 
                                 if (tipsMode == true) {option = 'M'; Menu.MenuTip(option);}
 
-                                std::cout << "*** Give number for object ***\n" << std::endl;
-                                std::cin >> example;
+                                //std::cout << "*** Give number for object ***\n" << std::endl;
+                                //std::cin >> example;
 
-                                std::cout << "*** Give vector -> X Y Z   ***\n" << std::endl;
-                                std::cin >> example;
+                                //std::cout << "*** Give vector -> X Y Z   ***\n" << std::endl;
+                                //std::cin >> example;
 
-                                //core.move()
 
                             break;
 
@@ -164,6 +163,8 @@ int main() {
 
                     while(choiseTwo != '0') {
 
+                        if (tipsMode == true) {option = 'L'; Menu.MenuTip(option);}
+
                         Menu.MenuLau();
 
                         std::cin >> choiseTwo;
@@ -189,8 +190,8 @@ int main() {
 
                             case '2':
 
-                                while(true)
-                                { 
+                                while(true) {
+
                                     Core.Update(0.1f);
 
                                     Lacze.Rysuj();
@@ -208,6 +209,34 @@ int main() {
                     }
 
                 break;
+
+                //case '$':
+
+                    //choiseTwo = '1';
+
+                    //while(choiseTwo != '0') {
+
+                        //switch(choiseTwo) {
+
+                            //case '0':
+
+                            //    choiseTwo = '0';
+
+                            //break;
+
+                            //case '1':
+
+                            //    std::cout << "\nTips mode --> " << tipsMode << std::endl;
+
+                            //break;
+
+                        //}
+
+                        //std::cin >> choiseTwo;
+
+                    //}
+
+                //break;
 
             }
 

@@ -32,11 +32,11 @@ void Drone::UpDate(float dt) {
 
                 angleFlyRot = floor(angleFlyRot);
 
-                std::cout << angleFlyRot << " -> generate\n" << std::endl;
+                //std::cout << angleFlyRot << " -> generate\n" << std::endl;
 
                 if (angleFlyRot != 0.0f) {
 
-                    std::cout << angleFlyRot << " -> in If != 0.0f\n" << std::endl;
+                    //std::cout << angleFlyRot << " -> in If != 0.0f\n" << std::endl;
 
                     if (angleFlyRot < rotation) {
 

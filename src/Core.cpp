@@ -15,7 +15,7 @@ void Core::NewDrone(
 
     ) {
 
-    uint id = Dro.size();   //generate new index for Drone, take size Drone Vector
+    uint id = Dro.size();
 
     Dro.push_back(Drone(startCenter, sizeTab));  
 
@@ -27,7 +27,8 @@ void Core::NewDrone(
 
     }
 
-    std::cout << id << " --> Drone Index" << std::endl;
+    std::cout << id << " --> Drone Index in vetor Dro" << std::endl;
+    std::cout << id + 1 << " --> Drone Index for User\n" << std::endl;
 
 }
 
