@@ -33,6 +33,11 @@ class Vector {
 
         }
 
+        Vector<Size>(double value) {
+            for (double& v : size)
+                v = value;
+        }
+
 
         Vector<Size> operator + (const Vector<Size> &V) const;
 
@@ -64,6 +69,9 @@ class Vector {
 
         template<uint NewSize>
         Vector<NewSize> cast() const;
+
+        Vector<Size> maximized() const;
+        Vector<Size> minimized() const;
 
 };
 
@@ -320,4 +328,22 @@ Vector<NewSize> Vector<Size>::cast() const {
 
     return result;
 
+}
+
+template<uint Size>
+Vector<Size> Vector<Size>::maximized() const {
+
+    auto max = std::max_element(size, size + Size);
+    //std::cout << *max << std::endl;
+
+    return Vector<Size>(*max);
+
+}
+
+template<uint Size>
+Vector<Size> Vector<Size>::minimized() const {
+
+    auto min = std::min_element(size, size + Size);
+
+    return Vector<Size>(*min);
 }

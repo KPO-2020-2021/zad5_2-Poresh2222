@@ -6,6 +6,7 @@
 #include <math.h>
 
 #include "Object.hh"
+#include "../inc/Objects/Box.hh"
 #include "../Vector/Vector2I.hh"
 #include "../Vector/Vector3I.hh"
 #include "../Vector/Vector4I.hh"
@@ -13,6 +14,7 @@
 #include "../Matrix/Matrix3x3.hh"
 #include "../helpers/Size.hh"
 
+class Core;
 
 class DroneCorpus: public Object<8> {
 
@@ -26,15 +28,15 @@ class DroneCorpus: public Object<8> {
 
             int l = 0;
 
-            for (double i = -1; i <= 1; ++i) {
+            for (double i = 0; i <= 1; ++i) {
 
                 for (double j = -1; j <= 1; ++j) {
 
                     for (double k = -1; k <= 1; ++k) {
 
-                        if (i != 0 && j != 0 && k != 0) {
+                        if (j != 0 && k != 0) {
 
-                            self[l++] = droPosition + Vector3I{k, j, i}.mult(halfSize);
+                            self[l++] = droPosition + Vector3I{k, j, 2*i}.mult(halfSize);
 
                         }
 
@@ -93,7 +95,7 @@ class DroneHeli: public Object<16> {
 class Drone {
 
         constexpr static const float MAX_VELOCITY = 10.0f;
-        constexpr static const float FLIGHT_HEIGHT = 40.0f;
+        constexpr static const float FLIGHT_HEIGHT = 140.0f;
         constexpr static const float FLIGHT_ROTATION = 40.0f;
 
     public:
@@ -104,6 +106,7 @@ class Drone {
 
         Vector3I targetPosition;
     
+        Box boundingBox;
 
         Drone(Vector3I droPosition, Vector3I droSize)
 
@@ -116,12 +119,13 @@ class Drone {
                 DroneHeli(droCorpus[6], droSize[0] * 0.45, droSize[2] * 0.33),
                 DroneHeli(droCorpus[7], droSize[0] * 0.45, droSize[2] * 0.33)
                 
-            } {
+            },
+            boundingBox(droPosition, droSize.maximized().mult(Vector3I{2.0, 2.0, 0.0}) + Vector3I{0, 0, droSize[2] * 1.5}) {
 
             targetPosition = droPosition;    
         }
 
-        void UpDate(float dt);
+        void UpDate(float dt, Core& core);
         
         void TurnHelis(bool on_off) {
 

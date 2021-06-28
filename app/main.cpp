@@ -14,6 +14,7 @@ int main() {
 
     int ObjectIndex = 0, objectIndex;
 
+    srand(time(0));
 
     Menu Menu;
 
@@ -106,7 +107,17 @@ int main() {
 
                                         case '2':
 
-                                            //DLC
+                                            if (tipsMode == true) {option = 'C'; Menu.MenuTip(option);}
+
+                                            std::cout << "** Enter start point -> X Y Z **\n" << std::endl;
+                                            std::cin >> startCorner;
+
+                                            startCorner[2] = 0;
+
+                                            std::cout << "\n** Enter size values -> W L H **\n" << std::endl;
+                                            std::cin >> sizeTab;
+
+                                            Core.NewObstacle(startCorner, sizeTab, Lacze);
 
                                         break;
 
@@ -192,13 +203,13 @@ int main() {
 
                                 while(true) {
 
-                                    Core.Update(0.1f);
+                                    Core.Update(0.10f);
 
                                     Lacze.Rysuj();
 
                                     using namespace std::chrono_literals;
 
-                                    std::this_thread::sleep_for(100ms);
+                                    std::this_thread::sleep_for(10ms);
 
                                 }
 

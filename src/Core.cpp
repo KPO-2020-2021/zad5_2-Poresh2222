@@ -1,7 +1,5 @@
 #include "../inc/Core.hh"
 #include "../inc/helpers/Size.hh"
-#include "../inc/Objects/Drone.hh"
-#include "../inc/Objects/Object.hh"
 #include "../inc/Matrix/Matrix3x3.hh"
 
 
@@ -58,9 +56,35 @@ void Core::Update(float dt) {
 
     for (uint i = 0; i < Dro.size(); ++i) {
 
-        Dro[i].UpDate(dt);
+        Dro[i].UpDate(dt, *this);
         Dro[i].SaveToFile("data/drone" + std::to_string(i));
 
     }
 
+}
+
+void Core::NewObstacle(
+
+        const Vector3I startCenter,
+
+        const Vector3I sizeTab,
+
+        PzG::LaczeDoGNUPlota& Lacze
+
+    ) {
+
+    uint id = Obstacles.size();
+
+    Obstacles.push_back(Obstacle(startCenter, sizeTab));  
+
+    std::vector<std::string> filenames = Obstacles.back().GetGNUPlotFilenames("data/obstacle" + std::to_string(id));
+
+    for (std::string& name : filenames) {
+
+        Lacze.DodajNazwePliku(name.c_str());
+
+    }
+
+    Obstacles.back().SaveToFile("data/obstacle" + std::to_string(id));
+    
 }

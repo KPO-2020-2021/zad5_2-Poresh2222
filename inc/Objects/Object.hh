@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 #include "../Vector/Vector3I.hh"
 #include "../Matrix/Matrix3x3.hh"

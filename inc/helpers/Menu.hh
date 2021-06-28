@@ -36,10 +36,10 @@ class Menu {
 
         void MenuObjC() {
 
-            std::cout << "\n*** Select Object ***\n" << std::endl;
-            std::cout << "*** 1 - Drone     ***\n" << std::endl;
-            //std::cout << "*** 2 - Car       ***\n" << std::endl;
-            std::cout << "\n*** 0 - Back      ***\n" << std::endl;
+            std::cout << "\n*** Select Object   ***\n" << std::endl;
+            std::cout << "*** 1 - Drone       ***\n" << std::endl;
+            std::cout << "*** 2 - Obstacle    ***\n" << std::endl;
+            std::cout << "\n*** 0 - Back        ***\n" << std::endl;
 
         }
 
@@ -64,9 +64,9 @@ class Menu {
 
                 std::cout << "\n??? StarPoint - Location of the central point of the object (pivot) ???" << std::endl;
                 std::cout << "??? Object Size:                                                    ???\n" << std::endl;
-                std::cout << "??? L - Lenght Drone                                                ???" << std::endl;
-                std::cout << "??? W - Width  Drone                                                ???" << std::endl;
-                std::cout << "??? H - Height Drone                                                ???\n" << std::endl;
+                std::cout << "??? L - Lenght Object                                               ???" << std::endl;
+                std::cout << "??? W - Width  Object                                               ???" << std::endl;
+                std::cout << "??? H - Height Object                                               ???\n" << std::endl;
                 std::cout << "??? Note: Recomend values for drone -> 50 50 30                     ???" << std::endl;
                 std::cout << "??? Note: Recomend Start Point -> 100 100 0 (X, Y, Z)               ???\n" << std::endl;
                 std::cout << "??? !!!Warning!!!: Z value most be -> 0                             ???\n" << std::endl;
@@ -80,7 +80,7 @@ class Menu {
 
                 std::cout << "\n??? !!!Warning!!!: In Landing Point Z value most be -> 0            ???" << std::endl;
                 std::cout << "??? If you add Landing points --> press Launch                      ???" << std::endl;
-                std::cout << "??? If you want stop this program pres Ctrl + C :)                   ???\n" << std::endl;
+                std::cout << "??? If you want stop this program pres Ctrl + C :)                  ???\n" << std::endl;
 
             }
 

@@ -1,8 +1,8 @@
 #include "../inc/Objects/Drone.hh"
-
+#include "Core.hh"
 #include "Vector3I.cpp"
 
-void Drone::UpDate(float dt) {
+void Drone::UpDate(float dt, Core& core) {
 
     Vector3I distance = targetPosition - droCorpus.GetPivot();
 
@@ -15,6 +15,8 @@ void Drone::UpDate(float dt) {
     float max_rotation = FLIGHT_ROTATION * dt;
 
     float angleFlyRot, rotation = max_rotation;
+
+    std::cout << "| " << targetPosition << " <-- TargetPosition |" << " | " << distance << " <-- Distance |" << " | " << droCorpus.GetPivot() << " <-- Pivot |" << std::endl;
 
     if (distance.length() > 0) {
 
@@ -66,6 +68,38 @@ void Drone::UpDate(float dt) {
                 
             }
 
+        } else {
+
+            bool ok = false;
+
+            do {
+
+                ok = true;
+
+                auto targetBB  = boundingBox;
+                targetBB.Translate(distance);
+
+                for (auto& obstacle : core.Obstacles) {
+
+                    if (obstacle.boundingBox.DoesIntersect(targetBB)) {
+
+                        ok = false;
+
+                        break;
+
+                    }
+
+                }
+
+                if (!ok) {
+
+                    targetPosition += Vector3I{50, 50, 0}.mult(Vector3I{(double)(-1 + rand() % 3), (double)(-1 + rand() % 3), 0.0});
+                    distance = targetPosition - droCorpus.GetPivot();
+
+                }
+
+            } while (!ok);
+            
         }
 
     } else { return; }
@@ -103,6 +137,8 @@ void Drone::UpDate(float dt) {
         heli.Translate(translation);
 
     }
+
+    boundingBox.Translate(translation);
 
 }
 

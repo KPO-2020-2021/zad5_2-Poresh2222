@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../inc/Objects/Box.hh
+Object.hh
+../inc/Objects/Object.hh
+
 /home/riddikk/PWR/zad5_2-Poresh2222/app/main.cpp
 stdlib.h
 -
@@ -41,6 +45,8 @@ fstream
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/lacze_do_gnuplota.hh
 ./Objects/Drone.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
+./Objects/Obstacle.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Obstacle.hh
 ./Matrix/Matrix3x3.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
 
@@ -58,6 +64,10 @@ Matrix.hh
 math.h
 -
 
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Box.hh
+Object.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
+
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Drone.hh
 iostream
 -
@@ -69,6 +79,8 @@ math.h
 -
 Object.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Object.hh
+../inc/Objects/Box.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/inc/Objects/Box.hh
 ../Vector/Vector2I.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector2I.hh
 ../Vector/Vector3I.hh
@@ -87,12 +99,18 @@ iostream
 -
 fstream
 -
+vector
+-
 ../Vector/Vector3I.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector3I.hh
 ../Matrix/Matrix3x3.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Matrix/Matrix3x3.hh
 ../helpers/Size.hh
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/helpers/Size.hh
+
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Obstacle.hh
+Box.hh
+/home/riddikk/PWR/zad5_2-Poresh2222/inc/Objects/Box.hh
 
 /home/riddikk/PWR/zad5_2-Poresh2222/inc/Vector/Vector.hh
 iostream
